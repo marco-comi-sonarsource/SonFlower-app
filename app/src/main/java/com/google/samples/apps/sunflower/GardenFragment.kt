@@ -65,4 +65,10 @@ class GardenFragment : Fragment() {
         requireActivity().findViewById<ViewPager2>(R.id.view_pager).currentItem =
             PLANT_LIST_PAGE_INDEX
     }
+
+      private fun test_default_values() {
+        val defaultPlant = Plant("2", "Apple", "Description", 1)
+        assertEquals(7, defaultPlant.wateringInterval)
+        assertEquals("", defaultPlant.imageUrl)
+    }
 }
